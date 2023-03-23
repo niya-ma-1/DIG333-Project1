@@ -19,9 +19,8 @@ The audio part of the project took me the longest to figure out, because I had t
 Turning my breadboard into a chip took me another 10+ hours. I first soldered a chip, only to realize that my amplifier is placed backwards. Here is the first chip <br>
 <img src="amp_chip_1.jpeg" width="25%" height="25%">
 <img src="amp_chip_2.jpeg" width="25%" height="25%"><br>
-I had to cut part of chip and put it onto a new one. I also make a tinkercad simulation hoping it would help simulate the chip, but it was not very useful.
+I had to cut part of chip and put it onto a new one. I also make a tinkercad simulation hoping it would help simulate the chip, but it was not very useful. <br>
 <img src="amp_tinkercad.png" width="25%" height="25%>
-
 This is the final product. <br>
 <img src="amp_chip_final.jpeg"  width="20%" height="20%"><br>
 
