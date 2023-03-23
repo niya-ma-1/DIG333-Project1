@@ -11,14 +11,18 @@
 
 
 ### Setp up hardward
+Material list: PIR sensor, speaker: $5, jumper wires, breadboard, alligator clips, jack, resistors, amplifier, capacitors.<br>
 It was very easy setting up the PIR sensor. I followed the [Youtube video](https://www.youtube.com/watch?v=Tw0mG4YtsZk&ab_channel=TechWithTim) made by Youtuber [Tech With Tim](https://www.youtube.com/@TechWithTim). I also found [this guide](https://projects.raspberrypi.org/en/projects/physical-computing/11) on Raspberry Pi's website very helpful.<br>
 <img src="sensor_setup.jpeg"  width="50%" height="50%"><br>
 The audio part of the project took me the longest to figure out, because I had to build an amplifier. I followed [this guide](https://www.instructables.com/Tales-From-the-Chip-LM386-Audio-Amplifier/) that Dr. Mundy found that has a detailed breadboard implementation. <br>
 <img src="amp_breadboard.jpeg"  width="50%" height="50%"><br>
 Turning my breadboard into a chip took me another 10+ hours. I first soldered a chip, only to realize that my amplifier is placed backwards. Here is the first chip <br>
-<img src="amp_chip_1.jpeg"  width="25%" height="25%">
-<img src="amp_chip_2.jpeg"  width="25%" height="25%"><br>
-I had to cut part of chip and put it onto a new one. This is the final product. <br>
+<img src="amp_chip_1.jpeg" width="25%" height="25%">
+<img src="amp_chip_2.jpeg" width="25%" height="25%"><br>
+I had to cut part of chip and put it onto a new one. I also make a tinkercad simulation hoping it would help simulate the chip, but it was not very useful.
+<img src="amp_tinkercad.png" width="25%" height="25%>
+
+This is the final product. <br>
 <img src="amp_chip_final.jpeg"  width="20%" height="20%"><br>
 
 
@@ -40,8 +44,46 @@ Coding went very smoothly, I started off with code for the LED and PIR sensor to
        print("Motion Stopped")
        
        
-       
-Then I added code for gTTS(Google Text-To-Speech) and API calls to https://complimentr.com/ and https://www.weatherapi.com/. The final code is *** insert final code***
+Then I added code for gTTS(Google Text-To-Speech) and API calls to https://complimentr.com/ and https://www.weatherapi.com/. The final code is 
+    from gpiozero import MotionSensor, LED
+    import time
+    from io import BytesIO
+    from gtts import gTTS
+    import os
+    import requests
+
+    green_led = LED(17)
+    pir = MotionSensor(4)
+    green_led.off()
+
+
+    def compliment():
+        response = requests.get("https://complimentr.com/api")
+        mytext = response.json()['compliment']
+
+        response_temp = requests.get("http://api.weatherapi.com/v1/current.json?key=26bded3797e543e38be180501231603&q=Charlotte&aqi=no")
+        mytext_temp = response_temp.json()['current']['temp_f']
+
+        language = 'en'
+        mytext = "Temperature outside is " + str(mytext_temp) + " fahrenheit. " + mytext
+
+        print(mytext)
+        tts = gTTS(text=mytext, lang=language, slow=False)
+        tts.save('test.mp3')
+
+        time.sleep(1)
+        os.system("mplayer -volume 50 test.mp3")
+
+
+    while True:
+        pir.wait_for_motion()
+        print("Motion Detected")
+        compliment()
+
+        green_led.on()
+        pir.wait_for_no_motion()
+        green_led.off()
+        print("Motion Stopped")
 
 
 ### Testing
@@ -50,8 +92,7 @@ I first included a LED light on the breadboard to test the PIR sensor. After mak
 
 ### Deliverable.
 <img src="final_project1.jpeg"  width="50%" height="50%"><br>
-
-*** insert link to video in drive***
+https://drive.google.com/drive/u/1/folders/17OXx0MjeDpwOJ4H-20d08lzexXIoXWu-
 
 
 ## Creator statement
