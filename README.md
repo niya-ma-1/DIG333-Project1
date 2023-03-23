@@ -12,8 +12,15 @@
 
 ### Setp up hardward
 It was very easy setting up the PIR sensor. I followed the [Youtube video](https://www.youtube.com/watch?v=Tw0mG4YtsZk&ab_channel=TechWithTim) made by Youtuber [Tech With Tim](https://www.youtube.com/@TechWithTim). I also found [this guide](https://projects.raspberrypi.org/en/projects/physical-computing/11) on Raspberry Pi's website very helpful.<br>
-*** insert photo of sensor*** <br>
-The audio part of the project took me the longest to figure out, because I had to build an amplifier. I followed [this guide](https://www.instructables.com/Tales-From-the-Chip-LM386-Audio-Amplifier/) that Dr. Mundy found that has a detailed breadboard implementation. *** insert photo of breadboard*** <br>Turning my breadboard into a chip took me another 10+ hours. I first soldered a chip, only to realize that my amplifier is placed backwards. I had to cut part of chip and put it onto a new one. This is the final product. *** insert photo of chip***
+![Sensor Setup](sensor_setup.jpeg) <br>
+The audio part of the project took me the longest to figure out, because I had to build an amplifier. I followed [this guide](https://www.instructables.com/Tales-From-the-Chip-LM386-Audio-Amplifier/) that Dr. Mundy found that has a detailed breadboard implementation. <br>
+![Amplifier Breadboard](audio_breadboard.jpeg)<br>
+Turning my breadboard into a chip took me another 10+ hours. I first soldered a chip, only to realize that my amplifier is placed backwards. Here is the first chip <br>
+![Amplifier Chip1](amp_chip_1.jpeg)
+![Amplifier Chip2](amp_chip_2.jpeg)
+I had to cut part of chip and put it onto a new one. This is the final product. <br>
+![Amplifier Chip Final](amp_chip_final.jpeg)
+
 
 ### Coding
 Coding went very smoothly, I started off with code for the LED and PIR sensor to detect motion. <br>
@@ -42,12 +49,12 @@ I first included a LED light on the breadboard to test the PIR sensor. After mak
 
 
 ### Deliverable.
-*** insert photo***
+![Deliverable Photo](final_project1.jpeg)
 
 *** insert link to video in drive***
 
 
-## Creator statement - (600-900 words) discussing the tech and its useful/lessness. The two perspectives can be in dialogue, or not.
+## Creator statement
 Q: What is the motivation behind this project? <br>
 A: This is a project without utility, meaning that I don't need a potential for commercial use or anything significant from this prooject. This project is called "Highlight of My Day" because I want to lighten up my roommate's day every now and then. 
 
@@ -61,5 +68,5 @@ Turning my breadboard into a chip took me another 10+ hours. I first soldered a 
 Q: What would I have done differently when making the chip?<br>
 A: Ideally I would use a tool that allows me to visualize the circuit on a chip and make sure it works. I make many mistakes while building the chip and had to do many patching work (hence the capacitors soldered to the back of the chip).
 
-Q: What
-
+Q: Do I think this project is perfect? What can be improved?<br>
+A: I think I was able to achieve most goals planned in the pitch, exept the indoor temperature monitor. My initial goal was to also include a temperature sensor and also speak the indoor temperature whenever the PIR sensor is triggered. When I started playing around with the temperature sensor, I realized that it is very inaccurate, often +-2 degrees celcius different than the accurate temeprature. This inaccuracy leads to the sensor not effectively measuring the temeprature change indoors, thus losing the purpose of using a sensor at all. Therefore, I resorted to using a temperature API that provided very accurate outdoor temperature in the area.
