@@ -12,16 +12,14 @@
 
 ### Setp up hardward
 It was very easy setting up the PIR sensor. I followed the [Youtube video](https://www.youtube.com/watch?v=Tw0mG4YtsZk&ab_channel=TechWithTim) made by Youtuber [Tech With Tim](https://www.youtube.com/@TechWithTim). I also found [this guide](https://projects.raspberrypi.org/en/projects/physical-computing/11) on Raspberry Pi's website very helpful.<br>
-![Sensor Setup](sensor_setup.jpeg) <br>
-
-<img src="sensor_setup.jpeg"  width="50%" height="50%">
+<img src="sensor_setup.jpeg"  width="50%" height="50%"><br>
 The audio part of the project took me the longest to figure out, because I had to build an amplifier. I followed [this guide](https://www.instructables.com/Tales-From-the-Chip-LM386-Audio-Amplifier/) that Dr. Mundy found that has a detailed breadboard implementation. <br>
-![Amplifier Breadboard](audio_breadboard.jpeg)<br>
+<img src="audio_breadboard.jpeg"  width="50%" height="50%"><br>
 Turning my breadboard into a chip took me another 10+ hours. I first soldered a chip, only to realize that my amplifier is placed backwards. Here is the first chip <br>
-![Amplifier Chip1](amp_chip_1.jpeg)
-![Amplifier Chip2](amp_chip_2.jpeg)
+<img src="amp_chip_1.jpeg"  width="50%" height="50%">
+<img src="amp_chip_2.jpeg"  width="50%" height="50%"><br>
 I had to cut part of chip and put it onto a new one. This is the final product. <br>
-![Amplifier Chip Final](amp_chip_final.jpeg)
+<img src="amp_chip_final.jpeg"  width="50%" height="50%"><br>
 
 
 ### Coding
@@ -51,7 +49,7 @@ I first included a LED light on the breadboard to test the PIR sensor. After mak
 
 
 ### Deliverable.
-![Deliverable Photo](final_project1.jpeg)
+<img src="final_project1.jpeg"  width="50%" height="50%"><br>
 
 *** insert link to video in drive***
 
