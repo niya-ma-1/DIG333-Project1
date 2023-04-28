@@ -1,5 +1,6 @@
 # DIG333-Project1 - Highlight of My Day
 
+https://youtube.com/shorts/MaI5Kzr2nR8?feature=share
 
 ## Milestones
 <ol>
@@ -91,7 +92,7 @@ I first included a LED light on the breadboard to test the PIR sensor. After mak
 
 ### Deliverable.
 <img src="final_project1.jpeg"  width="50%" height="50%"><br>
-https://drive.google.com/drive/u/1/folders/17OXx0MjeDpwOJ4H-20d08lzexXIoXWu-
+https://youtube.com/shorts/MaI5Kzr2nR8?feature=share
 
 
 ## Creator statement
